@@ -1,6 +1,23 @@
-import React from 'react';
+import React from "react";
+import styles from "./card.css";
+
 
 export default function Card(props) {
-  // acá va tu código
-  return <div>Card Component</div>
-};
+
+  const { name, min, max, img, onClose } = props
+
+  return (
+    <div className="card">
+      <button onClick={onClose}>X</button>
+      <h4>City: {name}</h4>
+      <div className="card__div">
+        <p>
+          Min:{min}
+        </p>
+        <p>
+          Max:{max}
+        </p>
+        <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="WeatherImg" />
+      </div>
+    </div>
+  )}

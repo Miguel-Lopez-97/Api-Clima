@@ -1,7 +1,23 @@
-import React from 'react';
+import React from 'react'
+import Card from './Card'
 
-export default function Cards(props) {
-  // acá va tu código
-  // tip, podés usar un map
-  return <div>Cards Component</div>
-};
+export default function Cards (props) {
+  const { cities, onClose } = props
+
+  return (
+    <div>
+      <button>STYLED</button>
+      {cities &&
+        cities.map(city => (
+          <Card
+            key={city.id}
+            max={city.max}
+            min={city.min}
+            name={city.name}
+            img={city.img}
+            onClose={() => onClose(city.id)}
+          />
+        ))}
+    </div>
+  )
+}
