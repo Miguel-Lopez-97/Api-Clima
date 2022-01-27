@@ -3,13 +3,14 @@ import React, { useState } from 'react'
 export default function SearchBar ({ onSearch }) {
   const [city, setCity] = useState('')
 
+  const handleChange = event => {
+    event.preventDefault()
+    onChange(city)
+    setName("")  
+  }
   return (
     <form
-      onSubmit={event => {
-        event.preventDefault()
-        onSearch(city)
-      }}
-    >
+      onSubmit={handleChange}>
       <input
         type='text'
         placeholder='Ciudad...'
