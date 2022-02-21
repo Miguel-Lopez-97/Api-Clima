@@ -15,7 +15,6 @@ _These instructions will allow you to get a working copy of the project on your 
  > ⚠️ _You'll need _"Node.js"_ to run this project in your computer._ 
  1. open the terminal and and install these dependencies  :   
     - `npm install`
-    - `npm i react-router-dom@6.2.1`
     - then `npm start`
 
 ## Deployment 📦
