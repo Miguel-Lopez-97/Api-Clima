@@ -1,4 +1,4 @@
-# Rick & Morty app
+# Weather app
 
 _This project is a React application for consume of Weather's API by City, dynamic styling and rendering and city's filtering_
 
