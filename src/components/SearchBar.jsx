@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import "./card.css"
 
 export default function SearchBar ({onSearch}) {
   const [city, setCity] = useState('')
@@ -11,14 +12,16 @@ export default function SearchBar ({onSearch}) {
   return (
     <form
       onSubmit={handleChange}>
+        <h3>Find the Weather City</h3>
+      <div className='searchBar'>
       <input
         type='text'
-        placeholder='Ciudad...'
+        placeholder='City...'
         value={city}
         onChange={event => setCity(event.target.value)}
       />
-
       <input type='submit' value='Add' />
+      </div>
     </form>
   )
 }

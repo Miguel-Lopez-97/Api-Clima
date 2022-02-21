@@ -5,15 +5,12 @@ export default function Cards (props) {
   const { cities, onClose } = props
 
   return (
-    <div>
+    <div className='containerCards'>
       {cities &&
         cities.map(city => (
           <Card
             key={city.id}
-            max={city.max}
-            min={city.min}
-            name={city.name}
-            img={city.img}
+            data={city}
             onClose={() => onClose(city.id)}
           />
         ))}

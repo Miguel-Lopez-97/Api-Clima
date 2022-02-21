@@ -19,15 +19,16 @@ function App () {
             max: Math.round(res.main.temp_max),
             img: res.weather[0].icon,
             id: res.id,
+            country: res.sys.country,
             wind: res.wind.speed,
-            temp: res.main.temp,
+            temp: Math.round(res.main.temp),
             name: res.name,
             weather: res.weather[0].main,
-            clouds: res.clouds.all,
-            latitud: res.coord.lat,
-            longitud: res.coord.lon
+            description: res.weather[0].description,
+            lat: res.coord.lat,
+            lon: res.coord.lon
           }
-          setCities(oldCities => [...oldCities, cityNew])
+          setCities(cities.find(e=>e.id===cityNew.id)?oldCities => [...oldCities]:oldCities => [...oldCities, cityNew])
         } else {
           alert('Ciudad no encontrada')
         }
@@ -41,14 +42,8 @@ function App () {
 
   return (
     <div className='App'>
-      <hr />
-      <div>
         <SearchBar onSearch={onSearch} />
-      </div>
-      <hr />
-      <div>
         <Cards cities={cities} onClose={onClose} />
-      </div>
     </div>
   )
 }
