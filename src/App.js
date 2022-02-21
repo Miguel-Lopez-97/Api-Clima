@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import Cards from './components/Cards.jsx'
 import SearchBar from './components/SearchBar.jsx'
-import data from './data.js'
 
 function App () {
   const [cities, setCities] = useState([])

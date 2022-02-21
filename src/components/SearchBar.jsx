@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
-export default function SearchBar ({ onSearch }) {
+export default function SearchBar ({onSearch}) {
   const [city, setCity] = useState('')
 
   const handleChange = event => {
     event.preventDefault()
-    onChange(city)
-    setName("")  
+    onSearch(city)
+    setCity("")  
   }
   return (
     <form

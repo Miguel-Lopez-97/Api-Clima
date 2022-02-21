@@ -6,7 +6,6 @@ export default function Cards (props) {
 
   return (
     <div>
-      <button>STYLED</button>
       {cities &&
         cities.map(city => (
           <Card
